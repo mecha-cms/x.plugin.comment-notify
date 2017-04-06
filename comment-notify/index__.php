@@ -8,7 +8,7 @@ function fn_comment_notify($file) {
     $from = Request::post('email');
     $to = $state['page']['email'];
     $subject = __replace__($state['page']['title'], [
-        'site.title' => strip_tags($site->title)
+        'site.title' => To::text($site->title)
     ]);
     $s = File::exist([PAGE . DS . $path . '.page', PAGE . DS . $path . '.archive']);
     $message = __replace__($state['page']['content'], [
