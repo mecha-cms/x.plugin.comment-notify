@@ -11,7 +11,7 @@ This plugin will notify you by email if there was a new comment added to a page.
 ~~~ .php
 [
     'page' => [
-        'title' => '%{site.title}% &#x00B7; New Comment', // email subject
+        'title' => '%{site.title}% · New Comment', // email subject
         'email' => 'email@gmail.com', // your email address
         'content' => '<p>A new comment has been added to <a href="%{comment.url}%">%{page.title}%</a>.</p>' // email message
     ]
