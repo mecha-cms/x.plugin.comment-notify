@@ -3,7 +3,7 @@ title: Comment Notify
 description: Notification of a new comment via email.
 author: Taufik Nurrohman
 type: Markdown
-version: 2.0.1
+version: 2.0.2
 ...
 
 This plugin will notify you by email if there was a new comment added to a page. Open `lot\extend\plugin\lot\worker\comment-notify\lot\state\config.php` to configure:
