@@ -1,6 +1,9 @@
 <?php
 
 function fn_comment_notify($file) {
+    if (Message::$x) {
+        return $file; // There are some error(s) in the form
+    }
     global $site, $url;
     // Delay sending the email notice after we create the comment file…
     Hook::set('guardian.kick.before', function($long) use($file, $site, $url) {
