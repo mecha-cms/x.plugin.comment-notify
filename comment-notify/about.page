@@ -3,7 +3,7 @@ title: Comment Notify
 description: Notification of a new comment via email.
 author: Taufik Nurrohman
 type: Markdown
-version: 2.0.4
+version: 2.1.0
 dependency: {"extension":["comment"]}
 ...
 
@@ -12,7 +12,7 @@ This plugin will notify you by email if there was a new comment added to a page.
 ~~~ .php
 [
     'page' => [
-        'title' => '%{title}% · New Comment', // email subject
+        'title' => '%{site.title}% · New Comment', // email subject
         'email' => 'email@gmail.com', // your email address
         'content' => '<p>A new comment has been added.</p>' // email message
     ]
