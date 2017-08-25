@@ -6,7 +6,7 @@ function fn_comment_notify($file) {
     }
     global $site, $url, $u_r_l;
     // Delay sending the email notice after we create the comment file…
-    Hook::set('guardian.kick.before', function($long) use($file, $site, $url) {
+    Hook::set('guardian.kick.before', function() use($file, $site, $url, $u_r_l) {
         $path = Path::F(Path::D($file), COMMENT);
         $o = [
             'comment' => new Comment($file),
@@ -26,7 +26,6 @@ function fn_comment_notify($file) {
         if (!empty($to)) {
             Message::send($from, $to, $subject, $message);
         }
-        return $long;
     });
     return $file;
 }

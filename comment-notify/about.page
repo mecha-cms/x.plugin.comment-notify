@@ -3,7 +3,7 @@ title: Comment Notify
 description: Notification of a new comment via email.
 author: Taufik Nurrohman
 type: Markdown
-version: 2.1.0
+version: 2.1.1
 dependency: {"extension":["comment"]}
 ...
 
