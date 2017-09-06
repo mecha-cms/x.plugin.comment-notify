@@ -21,8 +21,8 @@ function fn_comment_notify($file) {
         $state = Plugin::state(__DIR__);
         $from = Request::post('email');
         $to = $state['page']['email'];
-        $subject = __replace__($state['page']['title'], $o);
-        $message = __replace__($state['page']['content'], $o);
+        $subject = To::text(__replace__($state['page']['title'], $o));
+        $message = To::text(__replace__($state['page']['content'], $o), HTML_WISE_I, true);
         if (!empty($to)) {
             Message::send($from, $to, $subject, $message);
         }
