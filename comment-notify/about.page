@@ -16,7 +16,7 @@ This plugin will notify you by email if there was a new comment added to a page.
         'email' => 'email@gmail.com', // your email address
         'content' => '<p>A new comment has been added.</p>' // email message
     ]
-];
+]
 ~~~
 
 <!-- block:donate -->
