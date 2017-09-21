@@ -22,7 +22,7 @@ function fn_comment_notify($file) {
         $from = Request::post('email');
         $to = $state['page']['email'];
         $subject = To::text(__replace__($state['page']['title'], $o));
-        $message = To::text(__replace__($state['page']['content'], $o), HTML_WISE_I, true);
+        $message = To::text(__replace__($state['page']['content'], $o), HTML_WISE_I . ',p', true);
         if (!empty($to)) {
             Message::send($from, $to, $subject, $message);
         }
